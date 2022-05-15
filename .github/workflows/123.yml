@@ -1,8 +1,6 @@
 name: Gatsby Build and Publish
 
-on:
-  release:
-    types: [created]
+on: push
 
 jobs:
   build:
