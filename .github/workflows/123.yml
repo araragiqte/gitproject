@@ -26,6 +26,6 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET }}
-          AWS_S3_ENDPOINT:  https://storage.yandexcloud.net/araragitestbucket/b1gnl2epu24n1qirknph
+          AWS_S3_ENDPOINT:  https://storage.yandexcloud.net
           AWS_REGION: 'ru-central1'
           SOURCE_DIR: 'public'
