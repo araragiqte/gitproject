@@ -21,9 +21,9 @@ jobs:
         name: Upload S3
         id: S3
         with:
-          aws_key_id: ${{ secrets.PUB_YANDEX_KEY }}
-          aws_secret_access_key: ${{ secrets.PRV_YANDEX_KEY }}
-          aws_bucket: ${{ secrets.S3_BUCKET }}
+          aws_key_id: ${{ secrets.ID }}
+          aws_secret_access_key: ${{ secrets.SECRET }}
+          aws_bucket: ${{ secrets.BUCKET }}
           source_dir: 'static'
 
       - name: Update deployment status (success)
