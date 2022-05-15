@@ -1,0 +1,17 @@
+steps:
+  - name: Checkout
+    uses: actions/checkout@v3
+    with:
+      persist-credentials: false
+  - name: Create dir and file
+    run: |
+      mkdir -p slides/
+      echo "Test" > ./slides/file.txt
+  - name: Deploy to Yandex Cloud Object Storage
+    uses: paulvstrashnov/yandex-s3-upload-action@main
+    with:
+      accessKeyId: ${{ secrets.ID }}
+      secretAccessKey: ${{ secrets.SECRET }}
+      bucket: ${{ secrets.BUCKET }}
+      localPath: "./slides"
+      remotePath: "./slides"
