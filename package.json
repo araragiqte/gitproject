@@ -1,27 +1,19 @@
 {
-    "name": "yandex-serverless-action",
-    "version": "1.0.0",
-    "description": "Github action for deploy static website to Yandex Object Storage",
-    "main": "dist/index.js",
-    "scripts": {
-        "build": "ncc build src/index.ts -o dist"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@actions/core": "^1.2.6",
-        "async": "^3.2.0",
-        "aws-sdk": "^2.717.0",
-        "mime-types": "^2.1.27",
-        "recursive-readdir": "^2.2.2",
-        "typescript": "^3.9.7"
-    },
-    "devDependencies": {
-        "@types/async": "^3.2.3",
-        "@types/mime-types": "^2.1.0",
-        "@types/node": "^14.0.24",
-        "@types/recursive-readdir": "^2.2.0",
-        "@zeit/ncc": "^0.22.3"
-    }
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/araragiqte/site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/araragiqte/site/issues"
+  },
+  "homepage": "https://github.com/araragiqte/site#readme"
 }
