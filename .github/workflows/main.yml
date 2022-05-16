@@ -22,7 +22,7 @@ jobs:
           aws_key_id: ${{ secrets.ID }}
           aws_secret_access_key: ${{ secrets.SECRET }}
           aws_bucket: ${{ secrets.BUCKET }}
-          source_dir: '.'
+          source_dir: 'src'
 
       - name: Update deployment status (success)
         if: success()
