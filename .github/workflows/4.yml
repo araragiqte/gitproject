@@ -14,14 +14,16 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            # Build
-            - run: npm ci
-            - run: npm run build
+            - name: Create dir and file
+              run: |
+                mkdir -p slides/
+                echo "Test" > ./slides/file.txt
             # Deploy
             - uses: nekitcorp/yandex-storage-website-action@v1
               with:
                   accessKeyId: ${{ secrets.ID }}
                   secretAccessKey: ${{ secrets.SECRET }}
                   bucket: ${{ secrets.BUCKET }}
-                  path: "./build"
+                  localPath: "./slides"
+                  remotePath: "./slides"
                   clear: true

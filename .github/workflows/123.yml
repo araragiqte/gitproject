@@ -17,8 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build --if-present
+
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
@@ -26,6 +25,6 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET }}
-          AWS_S3_ENDPOINT:  https://storage.yandexcloud.net/araragitestbucket
+          AWS_S3_ENDPOINT:  https://storage.yandexcloud.net/araragitestbucket/index.html
           AWS_REGION: 'ru-central1'
           SOURCE_DIR: 'public'
