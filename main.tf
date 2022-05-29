@@ -19,5 +19,5 @@ resource "yandex_storage_object" "test-object" {
   secret_key = "YCNtcR48UZw4O0fYT1uzIFX2OOZ9dpjVAcilPWhN"
   bucket = "araragitestbucket"
   key    = "index.html"
-  source = "/home/antony/Desktop/ladder/git/site/index.html"
+  source = "index.html"
 }
