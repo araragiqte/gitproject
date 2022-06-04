@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+      stages {
+        stage ('docker login') {
+          steps {
+            docker login -u araragiqte -p abcodian0
+          }
+        }
+        stage ('docker build') {
+          steps {
+            cd site
+            docker build -t testsite .
+            docker tag testsite:latest araragiqte/testsite:latest
+          }
+          stage ('docker push') {
+            steps {
+              docker push araragiqte/testsite:latest
+           }
+          }
+        }
+      }
+    }
