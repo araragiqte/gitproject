@@ -1,7 +1,7 @@
 
-FROM alpine
+FROM ubuntu:latest
 
-RUN apt-get -y install apache2 nano 
+RUN apt-get install apache2 nano 
 
 RUN echo "Hello World from Docker image" > /var/www/html/index.html
 
