@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Loggin in DockerHub
+      run: docker login -u araragiqte -p 7f097c71-829a-41ba-9ac3-dfe4e58ffd91
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag araragiqte/testsite:latest
+    - name: Push to DockerHub
+      run: docker push araragiqte/testsite:latest
