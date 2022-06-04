@@ -1,5 +1,5 @@
 
-FROM apline
+FROM ubuntu:latest
 
 RUN apt -y update
 RUN apt -y install apache2 nano 
