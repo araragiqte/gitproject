@@ -5,7 +5,7 @@ RUN apt -y install apache2
 
 RUN apt-get install -y git
 
-RUN mkdir /var/www/html/
+RUN cd /var/www/html/
 RUN git clone https://github.com/araragiqte/site.git /var/www/html/
 
 
