@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    branches-ignore: 
+             - master
+
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        run: wget http://192.168.0.109:8080/job/from-git-to-dockerhub/build?token=fwrgegr/6y/6rlh/lrtgrwl54345567
