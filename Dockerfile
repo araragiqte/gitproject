@@ -3,8 +3,10 @@ FROM ubuntu:latest
 RUN apt -y update
 RUN apt -y install apache2
 
-ADD folder /var/www/html
-ADD index.html /var/www/html
+RUN apt-get install -y git
+
+RUN mkdir /var/www/html/
+RUN git clone https://github.com/araragiqte/site.git /var/www/html/
 
 
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
