@@ -1,10 +1,11 @@
 name: Docker Image CI
-
+env: 
+  name: Name of branch
+  
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches: 
+        - !master
 
 jobs:
 
