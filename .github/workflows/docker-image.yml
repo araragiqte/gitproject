@@ -1,11 +1,9 @@
 name: Docker Image CI
-env: 
-  name: Name of branch
   
 on:
   push:
-    branches: 
-        - '!master'
+    branches-ignore: 
+        - master
 
 jobs:
 
