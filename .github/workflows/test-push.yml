@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Push to jnkns
-        run: sh 'firefox http://192.168.0.109:8080/job/from-git-to-dockerhub/build?token=fwrgegr/6y/6rlh/lrtgrwl54345567'
+        run: curl http://192.168.0.109:8080/job/from-git-to-dockerhub/build?token=fwrgegr/6y/6rlh/lrtgrwl54345567
