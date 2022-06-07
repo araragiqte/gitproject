@@ -6,7 +6,7 @@ RUN apt-get install -y git
 
 RUN rm -rf /gitproject/
 RUN git clone https://github.com/araragiqte/site.git /gitproject/
-RUN cp /project/index.html /var/www/html/index.html
+RUN cp /gitproject/index.html /var/www/html/index.html
 
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 EXPOSE 80
