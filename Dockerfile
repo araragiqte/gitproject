@@ -9,7 +9,6 @@ RUN if [ "git clone https://github.com/araragiqte/site.git /var/www/html/" = "fa
 RUN mkdir /gitsite/ 
 RUN git clone https://github.com/araragiqte/site.git /gitsite/
 RUN cp index.html /var/www/html/
-; fi 
 
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 EXPOSE 80
